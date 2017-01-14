@@ -66,7 +66,8 @@ function webserver(req, res) {
     .then((content) => {
       res.writeHead(200, {'Content-type': contentType});
       res.end(content);
-    }, (error) => {
+    })
+    .catch((error) => {
       res.writeHead(404, {'Content-type': 'text/plain'});
       res.end('The resource was not found.');
     });
