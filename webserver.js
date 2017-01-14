@@ -7,19 +7,24 @@ const debug = require('debug')('webserver');
 const PORT = process.env.PORT || 8080;
 const publicFolder = '/public';
 
-function getMIMEtype(extension) {
-  let type = null;
-
+function getMIMEType(extension) {
   switch(extension) {
     case '.htm':
     case '.html':
-      type = 'text/html';
-      break;
+      return 'text/html';
     case '.css': 
-      type = 'text/css';
-      break;
+      return 'text/css';
+    case '.js':
+      return 'text/javascript'
+    case '.gif':
+      return 'image/gif'
+    case '.jpg':
+    case '.jpeg':
+      return 'image/jpeg'
+    case '.png':
+      return 'image/png'
     default:
-      type= 'unknown';
+      type = 'text/plain';
   }
 
   return type;
@@ -34,7 +39,7 @@ function webserver(req, res) {
   fs.access(filepath, fs.F_OK, (err) => {
     if (!err) {
       fs.readFile(filepath, (err, content) => {
-        let contentType = getMIMEtype(path.extname(filepath));
+        let contentType = getMIMEType(path.extname(filepath));
 
         res.writeHead(200, {'Content-type': contentType});
         res.end(content, 'utf-8');
