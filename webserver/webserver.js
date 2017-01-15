@@ -24,10 +24,8 @@ function getMIMEType(extension) {
     case '.png':
       return 'image/png'
     default:
-      type = 'text/plain';
+      return 'text/plain';
   }
-
-  return type;
 }
 
 function webserver(req, res) {
