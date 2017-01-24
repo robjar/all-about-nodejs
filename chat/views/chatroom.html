@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Welcome to MegaChat</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+  <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="../css/chatroom.css">
+</head>
+
+<body>
+  <div class="cr-container container-fluid">
+    <div class="col-xs-6 col-xs-offset-3 col-sm-6 col-sm-offset-3 panel panel-primary">
+        <h1 class="cr-title panel-heading">MegaChat</h1>
+
+        <div class="panel-body">
+          <div class="cr-userbox">
+            <img src="http://lorempixel.com/50/50/people" alt="" class="userPic">
+            <h3 class="userName">Username</h3>
+            <h3 class="pipe">|<h3>
+            <h3 class="logout">Logout</h3>
+          </div>
+          <div class="cr-newsroom">
+            <div class="newsRoom input-group input-group-lg pull-left">
+              <input type="text" class="form-control">
+            </div>
+            <button class="createRoom btn btn-success btn-lg pull-right">Create Room</button>
+          </div>
+        </div>
+        
+        <div class="cr-roomlist">
+          <ul class="roomlist list-group">
+            <a href="#" class="list-group-item"><li>NodeJS</li></a>
+            <a href="#" class="list-group-item"><li>Cloud Computing</li></a>
+            <a href="#" class="list-group-item"><li>MongoDB</li></a>
+          </ul>
+        </div>
+    </div>
+    
+  </div>
+</body>
+
+</html>

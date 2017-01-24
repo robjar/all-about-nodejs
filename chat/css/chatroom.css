@@ -1,0 +1,35 @@
+ul, li {
+  list-style: none;
+}
+
+.cr-container {
+  margin-top: 10px;
+}
+
+.panel {
+  box-shadow: 2px 2px 4px grey;
+}
+
+.panel-body {
+  padding-left: 0;
+  padding-right: 0;
+}
+
+.cr-userbox {
+  padding-bottom: 5px;
+}
+
+.cr-userbox h3 {
+  display: inline-block;
+}
+
+.cr-userbox .pipe {
+  padding-left: 5px;
+  padding-right: 10px;
+}
+
+.newsRoom {
+  margin-bottom: 5px;
+}
+
+
