@@ -2,14 +2,61 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <title>Welcome to MegaChat</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
-    <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.min.css">
-    <link rel="stylesheet" href="../css/index.css">
+  <meta charset="UTF-8">
+  <title>MegaChat</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+  <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="../css/room.css">
 </head>
 
 <body>
+  <div class="wrapper">
+    <div class="row">
+      <div class="rm-container col-xs-8 col-xs-offset-2 col-sm-8 col-sm-offset-2">
+        <h1 class="rm-title">MegaChat</h1>
+        <hr/>
+        <div class="rm-userbox">
+          <img src="http://lorempixel.com/50/50/people" alt="" class="userPic">
+          <h3 class="userName">Username</h3>
+          <h3 class="pipe">|
+            <h3>
+              <h3 class="logout">Logout</h3>
+        </div>
+        <div class="rm-roomname">
+          <h5>NodeJS</h5>
+        </div>
+        <div class="rm-main">
+          <div class="rm-messages">
+            <ul class="messages">
+              <li>
+                <div class="msgbox">
+                  <div class="pic">
+                    <img src="http://lorempixel.com/50/50/people" alt="" class="userPic">Username
+                  </div>
+                  <div class="msg">
+                    <p>
+                      Hi there! This looks nice!
+                    </p>
+                  </div>
+                </div>
+              </li>
+            </ul>
+          </div>
+          <div class="rm-users">
+            <ul>
+              <li>
+                <img src="http://lorempixel.com/20/20/people" alt="" class="userPic">
+              <h5>Username</h5>
+            </li>
+          </ul>
+        </div>
+        </div>
+        <div class="rm-newmessage">
+          <input type="text" class="newmessage" placeholder="Type in your message!">
+        </div>
+      </div>
+    </div>
+  </div>
 </body>
 
 </html>

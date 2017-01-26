@@ -1,0 +1,71 @@
+ul, li {
+  list-style: none;
+}
+
+body > div {
+  margin-top: 10px;
+}
+
+.rm-container {
+  box-shadow: 2px 2px 4px grey;
+  background-color: #ccc;
+}
+
+.rm-container .row {
+  padding: 15px;
+}
+
+.rm-userbox {
+  padding: 5px;
+  border: 1px solid black;
+}
+
+.rm-userbox > * {
+  display: inline-block;
+}
+
+.rm-roomname {
+  color: white;
+  background-color: black;
+  padding: 5px;
+  font-size: 20px;
+  font-weight: bolder;
+}
+
+.rm-messages,
+.rm-users,
+.rm-newmessage {
+  background-color: white;
+  border: 1px solid black;
+}
+
+.rm-messages,
+.rm-users {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+}
+
+.rm-messages {
+  left: 0;
+  width: 66%;
+}
+
+.rm-users {
+  right: 0;
+  width: 33%;
+}
+
+.rm-users li > * {
+  display: inline-block;
+}
+
+.rm-newmessage {
+  margin: 10px 0;
+}
+
+.rm-main {
+  position: relative;
+  height: 300px;
+}
+
