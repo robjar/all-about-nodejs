@@ -2,11 +2,11 @@ ul, li {
   list-style: none;
 }
 
-.cr-container {
+body > div {
   margin-top: 10px;
 }
 
-.panel {
+.cr-container {
   box-shadow: 2px 2px 4px grey;
 }
 
