@@ -17,7 +17,11 @@ app.engine('html', hogan);
 app.set('view engine', 'html');
 app.use(express.static(path.join(__dirname, 'public')));
 app.use(cookieParser());
-app.use(session({secret: 'topsecret'}));
+app.use(session({
+  secret: 'topsecret',
+  saveUninitialized: true,
+  resave: true
+}));
 
 app.use('/', router);
 
