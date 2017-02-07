@@ -1,0 +1,4 @@
+{
+  "dbURL": "mongodb://megachat_user:megachat@ds135029.mlab.com:35029/megachat",
+  "sessionSecret": "noOneKnows"
+}

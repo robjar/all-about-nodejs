@@ -10,6 +10,7 @@ var session = require('express-session');
 
 var env = process.env.NODE_ENV || 'development';
 var port = process.env.NODE_PORT || 3000;
+var config = require('./config');
 var router = require('./router/router.js');
 
 
