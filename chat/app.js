@@ -24,7 +24,7 @@ var sessionConfig = {
 
 if (env !== 'development') {
   sessionConfig = extend(sessionConfig, {
-    store: ConnectMongo({
+    store: new ConnectMongo({
       url: config.dbURL,
       stringify: true
     })
