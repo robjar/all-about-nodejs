@@ -11,34 +11,11 @@ var cookieParser = require('cookie-parser');
 var session = require('express-session');
 var ConnectMongo = require('connect-mongo')(session);
 var mongoose = require('mongoose').connect(config.dbURL);
+mongoose.Promise = global.Promise;
 var env = process.env.NODE_ENV || 'development';
 var port = process.env.NODE_PORT || 3000;
 
 var router = require('./router/router.js');
-
-mongoose.Promise = global.Promise;
-
-var userSchema = mongoose.Schema({
-  username: String,
-  password: String,
-  fullname: String
-});
-
-var Person = mongoose.model('users', userSchema);
-
-var John = new Person({
-  username: 'johndoe',
-  password: 'pass',
-  fullname: 'John Doe'
-});
-
-John.save(function(err) {
-  if (!err) {
-    console.log('Saved successfully');
-    return;
-  }
-  console.log('Saving failed');
-});
 
 var sessionConfig = {
   secret: config.sessionSecret,
@@ -49,7 +26,8 @@ var sessionConfig = {
 if (env !== 'development') {
   sessionConfig = extend(sessionConfig, {
     store: new ConnectMongo({
-      url: config.dbURL,
+      // url: config.dbURL,
+      mongooseConnection: mongoose.connections[0],
       stringify: true
     })
   });
