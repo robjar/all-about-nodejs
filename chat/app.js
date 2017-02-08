@@ -3,16 +3,17 @@
 var path = require('path');
 var extend = require('util')._extend;
 
+var config = require('./config');
 var express = require('express');
 var app = express();
 var hogan = require('hogan-express');
 var cookieParser = require('cookie-parser');
 var session = require('express-session');
 var ConnectMongo = require('connect-mongo')(session);
-
+var mongoose = require('mongoose').connect(config.dbURL);
 var env = process.env.NODE_ENV || 'development';
 var port = process.env.NODE_PORT || 3000;
-var config = require('./config');
+
 var router = require('./router/router.js');
 
 
